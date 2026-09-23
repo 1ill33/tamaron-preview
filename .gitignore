@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.*
+!.env.example
+cert/
+*.pem
+*.key
+tmp/
+output/
+*.log
+.DS_Store
+Thumbs.db
+.codex/
+.agents/
+# Local conversation archive and continuation notes are not deployment files.
+docs/chat-history/
+docs/project-context.md
+AGENTS.md

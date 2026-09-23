@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamaron Association</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head> 
+<body>
+
+<header class="navbar">
+    <div class="site-brand">
+        <div class="site-title">Tamaron Association</div>
+
+        <a class="site-phone" href="tel:2014450297">
+            <span class="phone-icon">☎</span>
+            <span>(201) 445-0297</span>
+        </a>
+    </div>
+
+    <div class="announcement-bar">
+        <div class="announcement-track">
+            <span>Announcements will go here</span>
+        </div>
+    </div>
+
+    <nav class="nav-links">
+        <button class="resident-button" onclick="toggleLoginBox()">Resident Login</button>
+    </nav>
+</header>
+
+<section id="loginBox" class="login-box hidden">
+    <h2>Resident Access</h2>
+    <form action="/resident-login" method="POST" class="login-form">
+        <input type="password" name="password" placeholder="Enter resident password" required>
+        <button type="submit">Enter</button>
+    </form>
+</section>
+
+<section class="hero">
+    <img src="banner.jpeg" alt="Website banner" class="hero-image">
+</section>
+
+<main class="content-section">
+    <h1>Welcome to Our Community</h1>
+    <p>Welcome Message.</p>
+    <p>Community description goes here.</p>
+</main>
+
+<section class="download-section">
+    <h2>Downloadable Files</h2>
+
+    <div class="download-list">
+
+        <a class="download-item" href="downloads/bylaws.pdf" target="_blank">
+            <div class="download-left">
+                <span class="file-icon text-icon">📝</span>
+                <span class="download-title">By-Laws</span>
+            </div>
+            <span class="download-action">View</span>
+        </a>
+
+        <a class="download-item" href="downloads/rules.pdf" target="_blank">
+            <div class="download-left">
+                <span class="file-icon text-icon">📝</span>
+                <span class="download-title">Rules & Regulations</span>
+            </div>
+            <span class="download-action">View</span>
+        </a>
+
+        <a class="download-item" href="downloads/calendar.pdf" target="_blank">
+            <div class="download-left">
+                <span class="file-icon pdf-icon">📄</span>
+                <span class="download-title">2 Month Calendar</span>
+            </div>
+            <span class="download-action">View</span>
+        </a>
+
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
