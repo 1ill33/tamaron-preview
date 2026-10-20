@@ -525,6 +525,24 @@ body {
     gap: 16px;
 }
 
+.zoom-meeting-section .download-button {
+    display: block;
+    width: fit-content;
+    margin: 12px auto 0;
+    background-color: var(--sagegreen);
+    color: var(--browndark);
+    text-align: center;
+}
+
+.zoom-meeting-section .download-button:hover {
+    background-color: #c0cca0;
+}
+
+.zoom-meeting-section .download-button:focus-visible {
+    outline: 3px solid var(--tanlight);
+    outline-offset: 4px;
+}
+
 .bulletin-item {
     background-color: var(--tanlight);
     border: 1px solid var(--tandark);
