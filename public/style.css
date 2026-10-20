@@ -488,6 +488,15 @@ body {
     font-size: 0.95rem;
 }
 
+.financial-reports {
+    margin: 0;
+    padding: 0 0 20px;
+}
+
+.bulletin-item .document-actions {
+    margin-top: 12px;
+}
+
 .document-actions {
     display: flex;
     flex-wrap: wrap;

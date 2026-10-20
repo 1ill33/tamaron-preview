@@ -67,10 +67,11 @@ app.get('/', (req, res) => {
 const publicFiles = [
     'index.html', 'style.css', 'script.js',
     'banner.jpeg', 'wood.jpg', 'grass2.jpg',
-    'downloads/bylaws.pdf', 'downloads/rules.pdf', 'downloads/calendar.pdf'
+    'downloads/bylaws.pdf', 'downloads/rules.pdf', 'downloads/calendar.pdf',
+    'downloads/October 2026.pdf'
 ];
 for (const file of publicFiles) {
-    app.get('/' + file, (req, res) => {
+    app.get(encodeURI('/' + file), (req, res) => {
         res.sendFile(path.join(publicDirectory, file));
     });
 }
@@ -115,7 +116,7 @@ for (const page of ['resident', 'resident-bulletin', 'resident-minutes', 'reside
     });
 }
 
-// The three public PDFs above are exceptions. Everything else in downloads,
+// The public PDFs above are exceptions. Everything else in downloads,
 // including future uploads, is resident-only. Keep PDF range requests working.
 app.use('/downloads', requireAuth, express.static(path.join(publicDirectory, 'downloads'), {
     index: false,
