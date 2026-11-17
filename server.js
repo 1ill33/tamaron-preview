@@ -67,7 +67,7 @@ app.get('/', (req, res) => {
 const publicFiles = [
     'index.html', 'style.css', 'script.js',
     'banner.jpeg', 'wood.jpg', 'grass2.jpg',
-    'downloads/bylaws.pdf', 'downloads/rules.pdf', 'downloads/calendar.pdf',
+    'downloads/governing-documents.pdf', 'downloads/rules.pdf', 'downloads/calendar.pdf',
     'downloads/October 2026.pdf'
 ];
 for (const file of publicFiles) {

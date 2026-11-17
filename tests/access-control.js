@@ -28,13 +28,13 @@ const server = app.listen(0, '127.0.0.1', async () => {
     }
     try {
         for (const url of ['/', '/index.html', '/style.css', '/script.js', '/banner.jpeg', '/wood.jpg', '/grass2.jpg',
-            '/downloads/bylaws.pdf', '/downloads/rules.pdf', '/downloads/calendar.pdf', '/downloads/October%202026.pdf']) {
+            '/downloads/governing-documents.pdf', '/downloads/rules.pdf', '/downloads/calendar.pdf', '/downloads/October%202026.pdf']) {
             assert.equal((await request(url, { method: 'HEAD' })).status, 200, url);
         }
         const protectedUrls = ['resident', 'resident-bulletin', 'resident-minutes', 'resident-clubhouse']
             .flatMap(page => ['/' + page, '/' + page + '.html']);
         const publicRoot = path.join(__dirname, '..', 'public');
-        const publicPdfs = new Set(['bylaws.pdf', 'rules.pdf', 'calendar.pdf', 'October 2026.pdf']);
+        const publicPdfs = new Set(['governing-documents.pdf', 'rules.pdf', 'calendar.pdf', 'October 2026.pdf']);
         for (const file of filesUnder(path.join(publicRoot, 'downloads'))) {
             if (publicPdfs.has(path.relative(path.join(publicRoot, 'downloads'), file))) continue;
             protectedUrls.push('/' + path.relative(publicRoot, file).split(path.sep).map(encodeURIComponent).join('/'));
